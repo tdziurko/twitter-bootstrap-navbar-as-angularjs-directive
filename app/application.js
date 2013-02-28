@@ -1,6 +1,14 @@
 "use strict";
 
-angular.module("navbarapp", ["controllers"]);
+angular.module("navbarapp", ["controllers"])
+  .directive("bootstrapNavbar", function() {
+  return {
+    restrict: "E",
+    replace: true,
+    transclude: true,
+    templateUrl: "components/bootstrapNavbar.html"
+  }});
+;
 
 var controllers = angular.module("controllers", []);
 
